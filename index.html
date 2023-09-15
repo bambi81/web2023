@@ -5,9 +5,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+	margin: 30;/*外距*/
+	width: 100%;
+    padding:0;/*內距*/
+	background: #7a2122 url('../images/body_bg.gif') repeat-x top;
+	font-family: Helvetica, sans-serif;
+	font-size: 62.5%;
+	color: #333;
+}
+h1, h2, p, ul, li {
+	margin: 0;
+	padding: 0;
+}
+p {
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+
+ul {
+	list-style-type: none;
+}
+span.amp {
+	font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+	font-weight: normal;
+	font-style: italic;
+}
+#masthead {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 800px;
+	color: #fff;
+}
+
+#masthead h1 {
+	float: left;
+}
+
+#nav {
+	float: right;/*往右浮動*/
+	margin: 50px 30px 0 0;/* 上邊：50px 的外邊距 右邊上邊：10px 的外邊距(上右下左)*/
+	font-size: 1.4em;
+}
+
+ 
+#nav li {
+	 display: inline; /*Inline行內元素 元素可在同一行內呈現 */
+	margin: 0 0 0 30px;
+}
+
+#nav li a {
+	color: #fff;
+	text-decoration: none;
+	background: none;
+}
+#nav li a.active {
+color: #ff0000;
+
+}
+#mainContent {
+	clear: both;
+	margin: 0 auto;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+	padding-bottom: 5px;
+	width: 800px;
+	background: #fff;
+	border: 5px solid #5c0505;
+}
+#titleBar img {
+	width: 100%;
+	 
+}
+#titleBar h1 {
+	font-size: 2em;
+	 margin: 10px; /*原本是0後面改成10*/
+	padding: 10px;
+	text-align: center;
+	background: url('tagline_bg.gif') repeat-x;
+}
+#content, #sidebar {
+	width: 375px;
+	height: 340px;
+	margin: 20px 0px 5px 0px;
+	padding: 10px;
+}
+
+#content {
+	float: right;
+	background: #fff; 
+}
+
+#content h2 {
+	font-size: 2.4em;
+	margin: 0 0 10px 0;
+}
+
+#content p {
+	margin: 0 0 10px 0;
+}
+#footer {
+	clear: both;
+	background: #eee;
+	padding: 10px;
+	border-top: 2px solid #ddd;
+	text-align: center;
+	color: #777;
+}
+    </style>
 </head>
 <body>
-    <div>
+    <div id="masthead">
+    <h1>RED LANTERN<br>DESIGN</h1>
+    </div>
+    <!-- <div>
         <h1><font color="purple">標籤</font></h1>
         <u1>
             <li>1</li>
@@ -16,6 +129,42 @@
             <li>4</li>
             <li>5</li>
         </u1>
+    </div> -->
+    <span class="amp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint </span>
+    <ul id="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div id="mainContent"> 
+        <div id="titleBar"><img src="tokyo.jpg"/>
+            <h1>Red Lantern builds unique interface user
+                experiences for the web.
+            </h1></div>
+        <div id="content">
+            <h2>Welcome to the New Red
+                <br>Lantern Design</h2>
+            <p>Red Lantern is a small web design and<br>
+                consulting firm specializing in standards-<br>
+                based web design and development. Our<br>
+                goal is to build simple, beautiful webpages<br>
+                that make your information easy to find and<br>
+                your users happy.<br>
+                If you or your company is interested in<br>
+                working with us. please check out our<br>
+                portfolio of design and branding work and<br>
+                contact us with your project details. We look<br>
+                forward to hearing from you and making<br>
+                your presence on the web a little simpler<br>
+                and easier to find.</p>
+        </div>
+    <div id="sidebar"></div>
+            <div id="footer">Copyright  Red Lantern Design,all right reserved.</div>
     </div>
+   
+    <!-- <div id="footer">
+        
+    </div> -->
 </body>
 </html>
