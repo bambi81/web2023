@@ -106,6 +106,33 @@ color: #ff0000;
 #content p {
 	margin: 0 0 10px 0;
 }
+#sidebar {
+	background: #EEE;
+}
+
+#sidebar h2 {
+	font-weight: bold;
+	border-bottom: 1px solid #ccc;
+	margin: 0 0 20px 0;
+	padding: 5px;
+}
+#link-list {
+	margin: 20px 0 0 0;
+	font-size: 1.4em;
+}
+#link-list li {
+	 margin: 0 0 10px 410px;/* margin: 0 0 10px 0px; 原*/
+	list-style:none;
+}
+#port li {
+	margin: 0 10px 20px 0;
+	float: left;
+	border: 5px solid #ddd;
+	 list-style:none; /*條列取消*/
+	 display: inline; /*Inline行內元素 元素可在同一行內呈現 */
+	 margin: 10 0 0 10px;/*左邊空位*/
+
+}
 #footer {
 	clear: both;
 	background: #eee;
@@ -118,7 +145,9 @@ color: #ff0000;
 </head>
 <body>
     <div id="masthead">
-    <h1>RED LANTERN<br>DESIGN</h1>
+    <!-- <h1>RED LANTERN<br>DESIGN</h1> -->
+	<img src="rl_logo.png"/>
+	
     </div>
     <!-- <div>
         <h1><font color="purple">標籤</font></h1>
@@ -130,7 +159,7 @@ color: #ff0000;
             <li>5</li>
         </u1>
     </div> -->
-    <span class="amp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint </span>
+    <span class="amp"> </span>
     <ul id="nav">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -158,9 +187,22 @@ color: #ff0000;
                 forward to hearing from you and making<br>
                 your presence on the web a little simpler<br>
                 and easier to find.</p>
+				
+				
         </div>
-    <div id="sidebar"></div>
-            <div id="footer">Copyright  Red Lantern Design,all right reserved.</div>
+		
+    <div id="sidebar"><h2>Our Work</h2>
+		<div id="port"><li>
+			<img src="markinjapan.jpg"/></li>
+			<li><img src="a2g.jpg"/></li>
+			<li><img src="foobar.jpg"/></li>
+			<li><img src="rpm.jpg"/></li>	
+		</div>
+	</div>
+	<div id="link-list"><li><a href="portfolio.html">View our full portfolio</a></li>
+		<li><a href="contact.html">contact Red Lantern</a></li>
+	</div>
+	<div id="footer">Copyright  Red Lantern Design,all right reserved.</div>    
     </div>
    
     <!-- <div id="footer">
