@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        
+        
+        background:url(images/back_all.jpg) repeat-y bottom;
+        background-size:1500px 1800px;
+        width:100% ;
+        font-family: Arial;
+       
+    }
+    p{
+        padding-top: 10px;
+        padding-left: 20px ;
+        font-family: Arial;
+       font-size:20px ;
+        color: #ffffff;
+    }
+    h1{
+        padding-top: 10px;
+        padding-left: 20px ;
+        font-family: Arial;
+       font-size:20px ;
+        color: #ffffff;
+    }
+   #qwe{
+    margin:30px;
+    float: right;
+
+   }
+    #qwe h1{
+        margin:0px 200pt;
+      
+        font-family: Arial;
+       font-size:30px ;
+        color: #ffffff;
+     
+       
+    }
+    #qwe p{
+        margin: 10px 0px 0px 215pt;
+        font-family: monospace ;
+       font-size:0.5px ;
+        color: #ffffff;
+        
+        
+    }
+    #ert {
+	clear: both;
+	margin: 0 auto;
+	padding-top: 0.1px;
+	padding-right: 0.1px;
+	padding-left: 0.1px;
+	padding-bottom: 0.1px;
+    
+	width: 920px;
+    height: 50px; 
+	background: rgb(255,201,166);
+    background: linear-gradient(180deg, rgb(254, 110, 84) 0%, rgba(243,113,13,1) 22%, rgba(182,48,11,1) 52%, rgba(246,151,94,1) 91%, rgba(252,104,11,1) 100%);
+    border: 3px solid #ffffff;
+	border-radius:10px 10px 10px 10px;
+    
+}
+#ert li{
+    list-style:none; /*條列取消*/
+    display: inline; 
+    margin: 10px 50px 10px; 
+   
+}
+#ert li a{
+    font-family: Arial;
+    font-size: 20px;
+    
+   
+    text-decoration: none;/* 去掉連結底線 */
+    color: #ffffff;
+}
+    #main {
+	clear: both;
+	margin: 0 auto;
+     margin-top:20px ;/*外部距離 */
+	padding-top: 10px;/*內部距離 */
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	width: 900px;
+    height: 1500px; 
+	background: #fff;
+	border-radius:10px 10px 10px 10px;
+}
+#img{
+    background: #413232;
+    height: 450px; 
+    border-radius:10px 10px 10px 10px;
+    border: 5px double #fff;
+}
+#scrollbar{
+    margin-top:50px ;/*外部距離 */
+    background: #eb6d12;
+    padding-top: 10px;/*內部距離 */
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+    height: 200px; 
+    border-radius:10px 10px 10px 10px;
+    /* overflow:scroll; 滾動條*/
+    overflow-y: scroll; /* 垂直滾動條*/
+    /* overflow: hidden; 直接隱藏不能滾動*/
+     
+   
+}
+
+#scrollbar::-webkit-scrollbar{
+    display: none; /* 將滾動條隱藏但能滾動*/
+}
+#r{
+    float: left;
+    margin-top:10px ;/*外部距離 */
+    margin-right:5px ;
+    /* background: #49e0ee; */
+    /*內部距離 */
+    /* padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;  */
+    width: 580px;
+    height: 800px; 
+    border-radius:10px 10px 10px 10px;
+}
+#r1, #l1 , #l2 , #l3 {
+    background: #eb6d12;
+    height: 45px; 
+    border-radius:10px 10px 10px 10px;
+   
+}
+#r2,#lu,#lu2,#lu3{
+    margin-top:3px;
+    padding-top: 20px;
+    background: linear-gradient(180deg, rgba(255,173,120,1) 0%, rgba(255,208,172,1) 15%, rgba(255,255,255,1) 26%, rgba(255,255,255,1) 69%, rgba(255,255,255,1) 100%);
+    /* height: 155px;  */
+    border-radius:10px 10px 10px 10px;
+}
+#r2{
+    padding-left: 20px ;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+#r2 p{
+    padding-top: 10px;
+        padding-left: 20px ;
+        font-family: Arial;
+       font-size:15px ;
+        color: #000000;
+}
+#l{  float: right;
+    margin-top:10px ;/*外部距離 */
+    margin-left:5px ;
+    background: #ffffff;
+   /*內部距離 */
+    /* padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px; */
+    width: 310px;
+    height: 800px; 
+    border-radius:10px 10px 10px 10px;
+}
+#lu2 li,#lu li,#lu3 li{
+    list-style:none;
+    /* padding-top: 10px; */
+    padding-left: 20px ;
+    padding-bottom: 10px ;
+}
+#lu2 li a,#lu li a,#lu3 li a{
+    
+    list-style:none;
+       
+        font-family: Arial;
+       font-size:15px ;
+        color: #b04a01;
+}
+#tyu a{
+    list-style:none;
+       
+        font-family: Arial;
+       font-size:15px ;
+        color: #b04a01;
+}
+</style>
+<body>
+    <header id="qwe">
+        <h1>NewDarkSide</h1>
+        <p><em>COMPANY SLOGAN GONES HERE</em></p>
+        
+    </header>
+   <div id="ert"><ul>
+    <li><b><a href="#">Home</a></b></li>
+    <li><b><a href="#">Blogs</a></b></li>
+    <li><b><a href="#">Photos</a></b></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+    
+   </ul></div>
+    <article id="main">
+
+
+
+        <div id="img">
+
+        </div>
+        <div id="scrollbar">
+            <h1>Welcome to Our Website</h1>
+            <p>NewDarkside is an improved version of metamorph_darkside template.</p>
+            <h1>WHAT WAS IMPROVED:</h1>
+            <p>1. Color scheme changed to orange</p>
+            <p>2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam numquam </p>
+              <p>3.molestiae tempore ipsa! Nihil delectus, eligendi earum quos impedit </p>  
+               <p>4.aperiam. Fuga quidem optio fugiat incidunt amet. Nesciunt iure dicta necessitatibus.</p>
+
+        </div>
+        <div id="r">
+            <div id="r1">
+                <h1>WELCOME TO OUR WEBSITE</h1>
+            </div>
+            <div id="r2">
+               <p>Posted on January 24th, 2011 by</p>
+               <p id="tyu"><a href="#">MetamorDhosis Desiqn</a></p>
+               <p>This website template is released under a<br>
+                Creative Commons Attribution 2.5 License</p> 
+                <p>We request you retain the full copyright notice
+                    below including the link to
+                    www.metamorphozis.com</p>
+                    <p>This not only gives respect to the large amount
+                        of time given freely by the developers but also
+                        helps build interest, traffic and use of our free
+                        and paid desig ns. If you cannot (for good
+                        reason) retain the full copyright we request you
+                        at least leave in place the Website Templates
+                        line, with Website Templates linked to
+                        www.metamorphozis.com. If you refuse to
+                        in elude eve n this the n support may be affected.</p>
+                        <p>You are allowed to use this design only if you
+                            agree to the following conditions:
+                            <br>- You cannot remove copyright notice from this
+                            design without our permission.
+                            <br>-If you modify this design it still should contain
+                            copyright because it is based on our work.
+                            <br>-You may copy, distribute, modify, etc. this
+                            template as long as link to our website remains untouched.</p>
+                            <p>For support visit
+                                http://www.metamorphozis.com/co ntact/co ntact.php
+                                
+                                <br>
+                                <br>
+                                <br> Metamorphosis Design : 2011</p>
+                                <p></p>
+            </div>
+
+        </div>
+        <div id="l">
+            <div id="l1">
+                <h1>CATEGORIES</h1>
+            </div>
+            <div id="lu">
+                <li><b><a href="#">Aliauam libero</a></b></li>
+                <li><b><a href="#">Consectetuer elit</a></b></li>
+                <li><b><a href="#">Metus Dellentesque</a></b></li>
+                <li><b><a href="#">SusDendisse mauris</a></b></li>
+            </div>
+            <div id="l2">
+                
+                <h1>ARCHIVES</h1>
+            </div>
+            <div id="lu2">
+                <li><b><a href="#">September</a></b> (23)</li>
+                <li><b><a href="#">August</a></b> (31)</li>
+                <li><b><a href="#">July</a></b> (31)</li>
+                <li><b><a href="#">June</a></b> (30)</li>
+                <li><b><a href="#">May</a></b></li>
+
+            </div>
+            <div id="l3">
+                 <h1>LOREM IPSUM<br>DOLOR</h1>
+            </div>
+            <div id="lu3">
+                <li><b><a href="#">Metus Dellentesque</a></b></li>
+                <li><b><a href="#">SusDendisse mauris</a></b></li>
+                <li><b><a href="#">Umanet molestie
+                    <br>semper</a></b></li>
+                <li><b><a href="#">Proin orci porttitor</a></b></li>
+            </div>
+
+        </div>
+
+    </article>
+
+</body>
+</html>
