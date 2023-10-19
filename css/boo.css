@@ -1,0 +1,23 @@
+
+
+h1, h3, p, ul, li {
+	margin: 0px auto;
+	padding: 0;
+   
+    font-family: Helvetica, sans-serif;
+	
+}
+#ert li,#ere li,#err li,#eru li{
+    list-style:none; /*條列取消*/
+    display: inline; 
+    /* margin: 10px 50px 10px;  */
+   
+}
+#ert li a,#ere li a ,#err li a,#eru li a{
+    font-family: Arial;
+    font-size: 20px;
+    
+   
+    text-decoration: none;/* 去掉連結底線 */
+    color: #ffffff;
+}
