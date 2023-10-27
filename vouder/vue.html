@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+      </div>
+      <p>
+        <button onclick="myFunction()">click</button>
+      </p>
+      <ul id="fg">
+        <li v-for="x in todos">{{x.text}} {{x.due}} </li>
+      </ul>
+      <p>
+        <button onclick="myFunction2()">click2</button>
+      </p>
+      
+</body>
+<script>
+    var myObject = new Vue({
+      el: '#app',
+      data: {message: 'Hello Vue!'}
+    })
+    var myObject2 = new Vue({
+      el: '#fg',
+      data: {todos:[
+        {text:"today",due: "10/25"},
+        {text:"tomarrow",due: "10/26"},
+        {text:"haha",due: "10/27"}
+      ]}
+    })
+    function myFunction(){
+        myObject.message="happy" +Math.floor(Math.random()*10);
+    }
+    function myFunction2(){
+        myObject2.todos.push( {text:"ddd",due: "1/1"});
+    }
+    </script>
+</html>
