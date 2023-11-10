@@ -123,18 +123,18 @@
                 </div>
             </div>
             <div class="row">
-                <div  v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
-                    <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
+                <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-bs-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img v-bind:src="item.imgSrc" class="w-100" alt="">
+                        <img src="img/portfolio/roundicons.png" class="w-100" alt="">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>{{item.title}}</h4>
-                        <p class="text-muted">{{item.title2}}</p>
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
@@ -652,15 +652,5 @@
     <!-- <script src="js/agency.min.js"></script> -->
 
 </body>
-<script src="/vendor/vue/vue.min.js"></script>
-<script>
- var myObject = new Vue({
-      el: "#portfolio",
-      data: {Portfolio:[
-        {href: "#portfolioModal1",imgSrc:"img/portfolio/roundicons.png",title:"Round Icons",title2:"Graphic Design"},
-        {href: "#portfolioModal1",imgSrc:"img/portfolio/roundicons.png",title:"Round Icons",title2:"Graphic Design"}
 
-      ]}
-    })   
-</script>
 </html>
