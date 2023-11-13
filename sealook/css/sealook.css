@@ -1,0 +1,49 @@
+body{
+  background-color:#056798;
+}
+
+
+
+
+#top{
+    background-color:rgb(241, 167, 20);
+    
+   
+    
+}
+#title{
+    display: none; 
+    list-style:none;
+    background-color:rgb(241, 167, 20);
+   
+}
+#title li{
+    display: inline-block;/* 並列 */
+}
+#title li a{
+   
+    color: #ffffff;
+    text-decoration:none;  /* 無底線 */
+   
+}
+@media only screen and (min-width:560px) {
+    #title { display: block; }
+  }/* 大於560 首頁選項出現 */
+  #b1{
+    display: none; 
+    color: #ffffff;
+  }
+  @media only screen and (max-width:560px) {
+    #b1 { display: block; }
+  }/* 小於560 b1出現 */
+  @media only screen and (min-width:560px) {
+  #video{
+    width:100% ;/* 改用%數可以更好的讓影片跟著網頁寬度變動 */
+    height:500px;
+  }}
+  @media only screen and (max-width:560px) {
+    #video{
+      
+      width:100% ;
+      height:218px;
+  }/* 小於560 b1出現 */}
