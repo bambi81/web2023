@@ -1,0 +1,6 @@
+package.json
+sealook
+package-lock.json
+server.js
+一定要打包起來
+npm install要安裝

@@ -4,13 +4,13 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static("Bs5_Vue"));//web root
+server.use(express.static("sealook"));//web root
 //server.use(express.static("md110"));//web root
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
 
-var DB = require("nedb-promises");
-var ContactDB = DB.create("contact.db");
+var DB = require("nedb-promises");//資料庫套件
+var ContactDB = DB.create("contact.db");//留言板儲存
 var PortfolioDB = DB.create("portfolio.db");
 // PortfolioDB.insert([
 //     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
@@ -29,7 +29,7 @@ server.set("views", __dirname+"/views");
 
 server.get("/contact", function(req, res){
     //res.send("");
-    res.redirect("https:/md.nutc.edu.tw");
+    res.redirect("https:/md.nutc.edu.tw");//回傳至某網頁
 }); 
 
 server.get("/service", function(req, res){
