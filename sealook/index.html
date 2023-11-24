@@ -75,7 +75,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" action="/contact"  >
+                    <form name="sentMessage" id="contactForm" action="/contact"  ><!-- method="Post" serve.post接收 -->
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -101,6 +101,12 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
+                            <div class="col-md-6"><!-- 選擇檔案 -->
+                                <div class="form-group">
+                                    <input class="form-control" type="file" accept="imgge/*" name="myfile1" id="myfile1"><!-- type類型 accept控制檔案類型   -->
+                                </div>
+                            
+                            </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
@@ -112,10 +118,41 @@
             </div>
         </div>
     </section>
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div  v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item">
+                    <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img v-bind:src="item.imgSrc" class="w-100" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>{{item.title}}</h4>
+                        <p class="text-muted">{{item.title2}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
       
     </div>
 </article>
 
 </body>
+<script src="/vue/vue.min.js"></script>
+<script>
+    var myObject = new Vue({
+         el: "#portfolio",
+         data: {Portfolio:[
+           {href: "#portfolioModal1",imgSrc:"img/portfolio/roundicons.png",title:"Round Icons",title2:"Graphic Design"},
+           {href: "#portfolioModal1",imgSrc:"img/portfolio/roundicons.png",title:"Round Icons",title2:"Graphic Design"},
+           {href: "#portfolioModal1",imgSrc:"img/portfolio/roundicons.png",title:"Round Icons",title2:"Graphic Design"}
+         ]}
+       })   
+   </script>
 </html>
