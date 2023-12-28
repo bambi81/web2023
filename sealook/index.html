@@ -7,12 +7,13 @@
     <title>Document</title>
     <link href="css/sealook.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="magic/magic.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 </head>
 
-<body style="background:#0f72b0">
+<body >
     <header>
          <img src="img/bg.png" id="bg" >
          <img src="img/c1.png" id="c1" >
@@ -56,6 +57,7 @@
             x: 500
         });
     </script>
+
     <div id="top">
         <div class="row">
             <div class="col-md-8 col-sm-8  ">
@@ -65,7 +67,7 @@
                 <P id="b1">cgfcgfc</P><!--  b1為隱藏下拉式選單  -->
             </div>
 
-            <div id="title" class="col-md-4 col-sm-4  ">
+            <div id="titl" class="col-md-4 col-sm-4  ">
                 <div><br><br></div>
                 <div class="row">
                     <li class="col-md-3 col-sm-3 "><a href="#">首頁</a></li>
@@ -85,6 +87,10 @@
 
 
     </div>
+   
+        
+        
+        <!--中心白色區塊  -->
     <article class="container">
         <div class=" bg-white mx-2">
             <div> <!--width="1280" height="500" -->
@@ -107,8 +113,8 @@
                 </div>
             </div>
 
-            <div class="mt-5 mx-5">
-                <h1>動畫簡介:</h1>
+            <div class="mt-5 mx-5 rounded" style="background:rgb(249, 235, 208);">
+                <h1  id="anmation1">動畫簡介:</h1>
                 <p>"sealook"由全球熱門動畫系列“幼蟲”的創作者所創立的動畫工作室 Million Volt 一起製作，這部無對話動畫採用全
                     3D製作，講述了一群外表和性格各不相同的海豹在冰雪覆蓋、和平寒冷的土地上進行喜劇冒險的旅程。
                     以在野生動物保護區觀察到的帶標籤的海豹為中心，每一集都聚焦不同的海豹，它們通過有趣而溫馨的方式應對生活中古怪而古怪的挑戰。</p>
@@ -117,32 +123,32 @@
                 <h1>出場海豹品種介紹:</h1>
 
             </div>
-            <div class=" mt-5 mx-5" id="role">
+            <div class="mt-5  mx-5 rounded" id="role" style="background:rgb(249, 235, 208);">
 
                 <h1>角色介紹&目錄</h1>
                 <li class="me-4"><a class="btn" style="background:rgb(241, 167, 20);" data-bs-toggle="collapse"
                         href="#rolelook" aria-expanded="false" aria-controls="rolelook">角色介紹&目錄</a></li>
             </div>
-            <div class="collapse mt-5 mx-5" id="rolelook">
+            <div class="collapse  mx-5 rounded" id="rolelook" style="background:rgb(249, 235, 208);">
                 <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
                     data-bs-toggle="collapse" data-bs-target="#rolelook" aria-expanded="false" aria-controls="rolelook">
                     close
                 </button>
                 <div>
 
-                    <section id="portfolio" class="bg-light-gray">
+                    <section  id="portfolio" class="bg-light-gray">
                         <div class="container">
-                            <div class="row">
-                                <div v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item ">
+                            <div  class="row">
+                                <div id="err" v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item ">
                                     <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
-                                        <div class="portfolio-hover">
+                                        <div  class="portfolio-hover">
                                             <div class="portfolio-hover-content">
                                                 <i class="fa fa-plus fa-3x"></i>
                                             </div>
                                         </div>
-                                        <img v-bind:src="item.imgSrc" class="w-100" alt="">
+                                        <img  v-bind:src="item.imgSrc" class="w-100" alt="">
                                     </a>
-                                    <div class="portfolio-caption " style="background: rgb(241, 167, 20);">
+                                    <div  class="portfolio-caption " style="background: rgb(241, 167, 20);">
                                         <h4>{{item.title}}</h4>
                                         <p class="text-muted">{{item.title2}}</p>
                                     </div>
@@ -212,15 +218,15 @@
                     </section>
                 </div>
             </div>
-            <section id="contact">
-                <div class="container">
-                    <div class="row">
+            <section id="contact " class="mt-5 mx-5">
+                <div class="container rounded-3 "  style="background:rgb(249, 235, 208);" >
+                    <div class="row "  >
                         <div class="col-lg-12 text-center">
                             <h1 class="section-heading">留言板</h1>
                             <h4 class="section-subheading text-muted">留下你的看法吧!</h4>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-lg-12">
                             <form name="sentMessage" id="contactForm" action="/contact " method="POST"
                                 enctype="multipart/form-data">
@@ -263,7 +269,7 @@
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <button type="submit" class="btn btn-xl">傳送</button>
+                                        <button type="submit" class="btn btn-xl" style="background:rgba(173, 216, 224, 0.765);">傳送</button>
                                     </div>
                                 </div>
                             </form>
@@ -280,6 +286,23 @@
 </body>
 <script src="/vue/vue.min.js"></script>
 <script src="jquery/jquery.min.js"></script>
+<script>
+    //  滑鼠處碰加載動畫
+        $('#anmation1').hover(function () {
+            $(this).stop(true, true).toggleClass('magictime slideRightReturn');
+
+        }, function () {
+            $(this).stop(true, true).addClass('magictime slideRightReturn');
+
+        });
+
+
+
+        // setInterval(function(){// 一定時間後加載動畫但無限循環
+        //    $('#err').toggleClass('magictime swashIn');
+        // }, 3000 );
+
+</script>
 <script>
     var myObject = new Vue({
         el: "#portfolio",

@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;800&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,11 +7,46 @@
 
 
 body{
-  background-color:#056798;
+  /* background-color:#056798; */
+  background:
+  linear-gradient(0deg, rgb(149, 2, 254), transparent 75%),
+  linear-gradient(120deg, rgb(0, 253, 203), transparent),
+  linear-gradient(240deg, rgb(56, 87, 238), transparent);
+background-size: 100% 100%;
+animation: gradient 5s ease-in-out infinite;
+/* 動畫設定三秒 ;infinite無止盡的播放;ase、ease-in、ease-out、ease-in-out
+具有加速減速的動畫，透過 ease 的加減速表現，能讓動畫更為流暢，比較不會像 linear 一樣硬梆梆 */
+background-attachment: fixed;
+}
+/* 關鍵影格keyframes ;這裡的gradient代表動畫名稱*/
+@keyframes gradient {
+  0% {
+      background-position: 50% 50%;
+      background-size: 100% 100%;
+  }
+
+  25% {
+      background-position: 0% 0%;
+      background-size: 200% 200%;
+  }
+
+  50% {
+      background-position: 0% 50%;
+      background-size: 200% 200%;
+  }
+
+  75% {
+      background-position: 100% 0%;
+      background-size: 200% 200%;
+  }
+
+  100% {
+      background-position: 50% 50%;
+      background-size: 100% 100%;
+  }
 }
 
-
-
+/* 滾動視差 */
 header {
   position: relative;
   width: 100%;
@@ -51,7 +86,7 @@ header img {
    
     
 }
-#title{
+#titl{
     display: none; 
     list-style:none;
     background-color:#ffbb00;
@@ -61,14 +96,14 @@ header img {
 /* #title li{
     display: inline-block;並列 
 } */
-#title li a{
-   
-    color: #ffffff;
+#titl li a{
+  font-family: 'Noto Sans TC', sans-serif;
+    color: #100428;
     text-decoration:none;  /* 無底線 */
    
 }
 @media only screen and (min-width:560px) {
-    #title { display: block; }
+    #titl { display: block; }
   }/* 大於560 首頁選項出現 */
   #b1{
     display: none; 
@@ -88,3 +123,7 @@ header img {
       width:100% ;
       height:218px;
   }/* 小於560 b1出現 */}
+  #err:hover {
+    transform: scale(1.2);
+    /* 滑鼠觸發大小 */
+  }
