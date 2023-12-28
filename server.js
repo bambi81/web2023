@@ -13,6 +13,9 @@ const formidable  = require('formidable')
 var DB = require("nedb-promises");//資料庫套件
 var ContactDB = DB.create("contact.db");//留言板儲存
 var PortfolioDB = DB.create("portfolio.db");
+var Portfolio2DB = DB.create("portfolio2.db");
+var Portfolio3DB = DB.create("portfolio3.db");
+var Portfolio4DB = DB.create("portfolio4.db");
 //  PortfolioDB.insert([
 //     { href: "#portfolioModal1", imgSrc: "img/000.jpg", title: "000 幽靈豹", title2: "是一隻透明看不到的海豹，出場有幽靈bgm" },
 //     { href: "#portfolioModal2", imgSrc: "img/001.jpg", title: "001 略略豹", title2: "會一直略略略和逗鳥跟吵其他海豹睡覺" },
@@ -46,9 +49,12 @@ var PortfolioDB = DB.create("portfolio.db");
 //     { href: "#portfolioModal30", imgSrc: "img/088.jpg", title: "088 賽車豹", title2: "Graphic Design" },
 //     { href: "#portfolioModal31", imgSrc: "img/BEAR.jpg", title: "北極熊", title2: "Graphic Design" }
 //  ])
-
+// Portfolio2DB.insert([
+//     {href: "#portfolioModal1",imgSrc:"img/000.jpg",title:"000 幽靈豹",title2:"是一隻透明看不到的海豹，出場有幽靈bgm"}
+//      ])
  
 //var sharp=
+
 server.set("view engine", "ejs");
 server.set("views", __dirname+"/views");
 
@@ -122,7 +128,36 @@ server.get("/portfolio", function(req, res){
               res.send("Error!")
         }
       }) 
+     
 
+})
+
+server.get("/portfolio2", function (req, res) {
+    Portfolio2DB.find({}).then(results => {//新增東西
+        if (results != null) {
+            res.send(results);
+        } else {
+            res.send("Error!")
+        }
+    })
+})
+server.get("/portfolio3", function (req, res) {
+    Portfolio3DB.find({}).then(results => {//新增東西
+        if (results != null) {
+            res.send(results);
+        } else {
+            res.send("Error!")
+        }
+    })
+})
+server.get("/portfolio4", function (req, res) {
+    Portfolio4DB.find({}).then(results => {//新增東西
+        if (results != null) {
+            res.send(results);
+        } else {
+            res.send("Error!")
+        }
+    })
 })
 
 
