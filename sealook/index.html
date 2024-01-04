@@ -13,46 +13,46 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 </head>
 
-<body >
+<body>
     <header>
-         <img src="img/bg.png" id="bg" >
-         <img src="img/c1.png" id="c1" >
-         <img src="img/c2.png" id="c2" >
-         <img src="img/sl2.png" id="sl2" >  
-         <img src="img/sl3.png" id="sl3" >
-         <img src="img/sl1.png" id="sl1" >
-         <img src="img/logo.png" id="logo1" >
+        <img src="img/bg.png" id="bg">
+        <img src="img/c1.png" id="c1">
+        <img src="img/c2.png" id="c2">
+        <img src="img/sl2.png" id="sl2">
+        <img src="img/sl3.png" id="sl3">
+        <img src="img/sl1.png" id="sl1">
+        <img src="img/logo.png" id="logo1">
 
-         
+
     </header>
     <script>
-         gsap.to("#c1",{
-            scrollTrigger:{
-                scrub:1
+        gsap.to("#c1", {
+            scrollTrigger: {
+                scrub: 1
             },
             x: 800
         });
-        gsap.to("#c2",{
-            scrollTrigger:{
-                scrub:1
+        gsap.to("#c2", {
+            scrollTrigger: {
+                scrub: 1
             },
             x: -800
         });
-        gsap.to("#sl1",{
-            scrollTrigger:{
-                scrub:1
+        gsap.to("#sl1", {
+            scrollTrigger: {
+                scrub: 1
             },
             x: -500
         });
-        gsap.to("#sl2",{
-            scrollTrigger:{
-                scrub:1
+        gsap.to("#sl2", {
+            scrollTrigger: {
+                scrub: 1
             },
-            scale:1.2
+            scale: 1.2
         });
-        gsap.to("#sl3",{
-            scrollTrigger:{
-                scrub:1
+        gsap.to("#sl3", {
+            scrollTrigger: {
+                scrub: 1
             },
             x: 500
         });
@@ -61,10 +61,22 @@
     <div id="top">
         <div class="row">
             <div class="col-md-8 col-sm-8  ">
-                
-                <img src="img/logo02.png"class="img-fluid w-30 ms-5" id="logo2" >
-                
-                <P id="b1">cgfcgfc</P><!--  b1為隱藏下拉式選單  -->
+                <img src="img/logo02.png" class="img-fluid w-30 ms-5" id="logo2">
+                <div id="b1" class="dropdown  mx-5 "><!--  b1為隱藏下拉式選單  -->
+                    <a class="btn btn-secondary dropdown-toggle" style="background:rgb(241, 167, 20); " href="#"
+                        role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        主選單
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">首頁</a></li>
+                        <li><a class="dropdown-item" href="#role">角色介紹</a></li>
+                        <li><a class="dropdown-item" href="#">精彩影片</a></li>
+                        <li><a class="dropdown-item" href="#contact">留言板</a></li>
+                    </ul>
+
+                </div>
+
             </div>
 
             <div id="titl" class="col-md-4 col-sm-4  ">
@@ -73,8 +85,9 @@
                     <li class="col-md-3 col-sm-3 "><a href="#">首頁</a></li>
                     <!-- <li class="me-4"><a  class="btn" style="background:rgb(241, 167, 20);"  data-bs-toggle="collapse" href="#rolelook" aria-expanded="false" aria-controls="rolelook">角色介紹&目錄</a></li> -->
                     <li class="col-md-3 col-sm-3 "><a href="#role">角色介紹</a></li>
-                    <li class="col-md-3 col-sm-3 "><a class="btn" style="background:rgb(241, 167, 20); " data-bs-toggle="collapse"
-                            href="#videolook" role="button" aria-expanded="false" aria-controls="videolook">精彩影片</a>
+                    <li class="col-md-3 col-sm-3 "><a class="btn" style="background:rgb(241, 167, 20); "
+                            data-bs-toggle="collapse" href="#videolook" role="button" aria-expanded="false"
+                            aria-controls="videolook">精彩影片</a>
                     </li>
                     <li class="col-md-3 col-sm-3 "><a href="#contact">留言板</a></li>
                 </div>
@@ -87,10 +100,10 @@
 
 
     </div>
-   
-        
-        
-        <!--中心白色區塊  -->
+
+
+
+    <!--中心白色區塊  -->
     <article class="container">
         <div class=" bg-white mx-2">
             <div> <!--width="1280" height="500" -->
@@ -100,13 +113,20 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
             </div>
-            <div class="collapse mt-5 mx-5" id="videolook">
+            <div class="mx-5 mt-5">
+                <h1>精彩影片賞析</h1>
                 <button class="btn" type="button" style="background:  rgb(241, 167, 20); " data-bs-toggle="collapse"
                     data-bs-target="#videolook" aria-expanded="false" aria-controls="videolook">
                     close
                 </button>
+            </div>
+            <div class="collapse mt-5 mx-5" id="videolook">
+                <!-- <button class="btn" type="button" style="background:  rgb(241, 167, 20); " data-bs-toggle="collapse"
+                    data-bs-target="#videolook" aria-expanded="false" aria-controls="videolook">
+                    close
+                </button> -->
                 <div>
-                    <h1>精彩影片賞析</h1>
+
                     <p>***小叮嚀***<br>上面影片會循環播放"sealook"全集數，旁邊有播放清單，可以選擇自己想看的集數，<br>
                         本人最喜歡的集數是:EP04取暖 ㄎㄟˋ修、EP23 放屁的威力(在"It Stinks!"合集裡)、EP25 吃過頭(在"卡住"合集裡)、EP61 你看不見我嗎?、EP62
                         擾人清夢的最高境界、EP73小題大作、EP76 我只想好好吃頓飯</p>
@@ -114,41 +134,119 @@
             </div>
 
             <div class="mt-5 mx-5 rounded" style="background:rgb(249, 235, 208);">
-                <h1  id="anmation1">動畫簡介:</h1>
+                <h1 id="anmation1">動畫簡介:</h1>
                 <p>"sealook"由全球熱門動畫系列“幼蟲”的創作者所創立的動畫工作室 Million Volt 一起製作，這部無對話動畫採用全
                     3D製作，講述了一群外表和性格各不相同的海豹在冰雪覆蓋、和平寒冷的土地上進行喜劇冒險的旅程。
                     以在野生動物保護區觀察到的帶標籤的海豹為中心，每一集都聚焦不同的海豹，它們通過有趣而溫馨的方式應對生活中古怪而古怪的挑戰。</p>
             </div>
             <div class="mt-5 mx-5">
-                <h1>出場海豹品種介紹:</h1>
+                <h1 class="mb-5">出場海豹品種介紹:</h1>
+                <div class="row mb-5">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="img/豎琴海豹.png" alt="sdfd" class=" img-fluid rounded-3 float-end " style="width:80%;">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <p class="my-5">豎琴海豹共有6個外貌階段，分別是幼年期("白袍（whitecoats"、"夾克（ragged
+                            Jackets)"、青少年期("拍打者(beater)"、"混亂者(bedlamers)")、青壯年期("斑點豎琴(spotted harp)")、完全成年期("成熟豎琴(old
+                            harp)")，
+                            動畫中至少畫了豎琴海豹的四種階段;幼年階段以031、041、042、043海豹為年幼白團子階段也就是"whitecoats";青少年時期以001、016、046、038海豹原形為"拍打者(beater)"型態，而在“bedlamer”這個階段特徵非常混亂，身體未達到成年尺寸，顏色以銀灰色為主，有一些散落的棕黑色斑點;
+                            青壯年期(spotted
+                            harp的海豹)有005、044，044可能還參考了小浣熊的配色，在這個階段的海豹通常即將或已經開始生育，豎琴紋也開始顯現，斑點變淺但仍然可見，過一段時間斑點就會完全消褪，就會變成"old
+                            harp"完全成熟型態;
+                            完全成年期("成熟豎琴(old
+                            harp)")有003、026、035，雄性豎琴海豹會突然出現黑色的"豎琴"花紋，這花紋是成年皮毛的特徵，雌性的轉變較慢，可能需要很多年。實際上，有些雌性豎琴海豹從未失去所有斑點或是沒有形成完整的"豎琴"花紋
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <p class="my-5">在sealook中，除了豎琴海豹外，也會看到其他海豹的身影，029和045原型可能是參考了灰海豹，
+                            029出場於和016合唱那一集，兩個會一起合唱，但唱歌時間總是不合時宜，灰海豹配色會偏黑或偏棕，這都是正常範圍的
+                            045的造型花紋分布參考灰海豹，配色則是參考黃鼬，可能是因為045放屁很臭才給他這種配色的。
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="img/灰海豹.jpg" alt="sdfd" class=" img-fluid  rounded-3" style="width:70%;">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="img/髯海豹.jpg" alt="sdfd" class=" img-fluid rounded-3 float-end" style="width:70%;">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <p class="my-5">
+                            髯海豹代表是006、030，嘴、吻寬而肉質(俗稱肉肉嘴)，兩鼻孔相隔遠。觸鬚多，長而密，呈淡色，潮濕時的觸鬚是直的，乾時，頂端向內捲曲。“髯海豹”之名來自特別顯著的大鬍子；雄性髯海豹是所有海洋動物中最善於表達聲音的動物之一。它們特製的「歌曲」可以持續長達一分鐘以上。
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <p class="my-5">
+                            環海豹代表是010，有黑色的皮膚，有四個白斑紋：一條白條繞著頸部，一條繞著尾部，其身軀左右兩邊各有一條白條，雄性身上黑白分明顯著，而雌性就相對地沒那麼明顯的對比。
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="img/環海豹.jpg" alt="sdfd" class=" img-fluid  rounded-3" style="width:70%;">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <img src="img/環班海豹.jpg" alt="sdfd" class=" img-fluid  rounded-3 float-end" style="width:70%;">
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <p class="my-5">環班海豹代表是013，北極中最小隻也是數量最多、分佈最廣的
+                            海豹，因具有特徵性的黑色斑點，斑點圖案周圍環繞著淺灰色環而得。
+                        </p>
+                    </div>
+                </div>
 
             </div>
             <div class="mt-5  mx-5 rounded" id="role" style="background:rgb(249, 235, 208);">
 
                 <h1>角色介紹&目錄</h1>
-                <li class="me-4"><a class="btn" style="background:rgb(241, 167, 20);" data-bs-toggle="collapse"
-                        href="#rolelook" aria-expanded="false" aria-controls="rolelook">角色介紹&目錄</a></li>
-            </div>
-            <div class="collapse  mx-5 rounded" id="rolelook" style="background:rgb(249, 235, 208);">
                 <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
                     data-bs-toggle="collapse" data-bs-target="#rolelook" aria-expanded="false" aria-controls="rolelook">
-                    close
+                    全部海豹
                 </button>
+
+                <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
+                    data-bs-toggle="collapse" data-bs-target="#rolelook2" aria-expanded="false"
+                    aria-controls="rolelook2">
+                    音樂魅力
+                </button>
+                 <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
+                    data-bs-toggle="collapse" data-bs-target="#rolelook3" aria-expanded="false"
+                    aria-controls="rolelook3">
+                    迷人的魅力
+                </button>
+                <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
+                    data-bs-toggle="collapse" data-bs-target="#rolelook4" aria-expanded="false"
+                    aria-controls="rolelook4">
+                    療育大師
+                </button>
+            </div>
+            <div class="collapse  mx-5 rounded" id="rolelook" style="background:rgb(249, 235, 208);">
+
                 <div>
 
-                    <section  id="portfolio" class="bg-light-gray">
+                    <section id="portfolio" class="bg-light-gray">
                         <div class="container">
-                            <div  class="row">
-                                <div id="err" v-for="item in Portfolio" class="col-md-4 col-sm-6 col-xs-12 portfolio-item ">
+                            <div class="row">
+                                <div id="err" v-for="item in Portfolio"
+                                    class="col-md-4 col-sm-6 col-xs-12 portfolio-item ">
                                     <a v-bind:href="item.href" class="portfolio-link" data-bs-toggle="modal">
-                                        <div  class="portfolio-hover">
+                                        <div class="portfolio-hover">
                                             <div class="portfolio-hover-content">
                                                 <i class="fa fa-plus fa-3x"></i>
                                             </div>
                                         </div>
-                                        <img  v-bind:src="item.imgSrc" class="w-100" alt="">
+                                        <img v-bind:src="item.imgSrc" class="w-100" alt="">
                                     </a>
-                                    <div  class="portfolio-caption " style="background: rgb(241, 167, 20);">
+                                    <div class="portfolio-caption " style="background: rgb(241, 167, 20);">
                                         <h4>{{item.title}}</h4>
                                         <p class="text-muted">{{item.title2}}</p>
                                     </div>
@@ -156,10 +254,20 @@
                             </div>
                         </div>
                     </section>
+
+                    
+                   
+                </div>
+            </div>
+
+            <div class="collapse  mx-5 rounded" id="rolelook2" style="background:rgb(249, 235, 208);">
+
+                <div>
                     <section id="portfolio2" class="bg-light-gray">
                         <div class="container">
                             <div class="row">
-                                <div v-for="item in Portfolio2" class="col-md-4 col-sm-6 col-xs-12 portfolio2-item ">
+                                <div id="err2" v-for="item in Portfolio2"
+                                    class="col-md-4 col-sm-6 col-xs-12 portfolio2-item ">
                                     <a v-bind:href="item.href" class="portfolio2-link" data-bs-toggle="modal">
                                         <div class="portfolio2-hover">
                                             <div class="portfolio2-hover-content">
@@ -176,10 +284,19 @@
                             </div>
                         </div>
                     </section>
-                  <section id="portfolio3" class="bg-light-gray">
+
+                </div>
+            </div>
+
+            <div class="collapse  mx-5 rounded" id="rolelook3" style="background:rgb(249, 235, 208);">
+
+                <div>
+
+                    <section id="portfolio3" class="bg-light-gray">
                         <div class="container">
                             <div class="row">
-                                <div v-for="item in Portfolio3" class="col-md-4 col-sm-6 col-xs-12 portfolio3-item ">
+                                <div id="err3" v-for="item in Portfolio3"
+                                    class="col-md-4 col-sm-6 col-xs-12 portfolio3-item ">
                                     <a v-bind:href="item.href" class="portfolio3-link" data-bs-toggle="modal">
                                         <div class="portfolio3-hover">
                                             <div class="portfolio3-hover-content">
@@ -196,10 +313,17 @@
                             </div>
                         </div>
                     </section>
+                </div>
+            </div>
+
+            <div class="collapse  mx-5 rounded" id="rolelook4" style="background:rgb(249, 235, 208);">
+
+                <div>
                     <section id="portfolio4" class="bg-light-gray">
                         <div class="container">
                             <div class="row">
-                                <div v-for="item in Portfolio4" class="col-md-4 col-sm-6 col-xs-12 portfolio4-item ">
+                                <div id="err4" v-for="item in Portfolio4"
+                                    class="col-md-4 col-sm-6 col-xs-12 portfolio4-item ">
                                     <a v-bind:href="item.href" class="portfolio4-link" data-bs-toggle="modal">
                                         <div class="portfolio4-hover">
                                             <div class="portfolio4-hover-content">
@@ -216,17 +340,19 @@
                             </div>
                         </div>
                     </section>
+                   
                 </div>
             </div>
-            <section id="contact " class="mt-5 mx-5">
-                <div class="container rounded-3 "  style="background:rgb(249, 235, 208);" >
-                    <div class="row "  >
+
+            <section id="contact" class="mt-5 mx-5">
+                <div class="container rounded-3 " style="background:rgb(249, 235, 208);">
+                    <div class="row ">
                         <div class="col-lg-12 text-center">
                             <h1 class="section-heading">留言板</h1>
                             <h4 class="section-subheading text-muted">留下你的看法吧!</h4>
                         </div>
                     </div>
-                    <div class="row" >
+                    <div class="row">
                         <div class="col-lg-12">
                             <form name="sentMessage" id="contactForm" action="/contact " method="POST"
                                 enctype="multipart/form-data">
@@ -269,7 +395,8 @@
                                     <div class="clearfix"></div>
                                     <div class="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <button type="submit" class="btn btn-xl" style="background:rgba(173, 216, 224, 0.765);">傳送</button>
+                                        <button type="submit" class="btn btn-xl"
+                                            style="background:rgba(173, 216, 224, 0.765);">傳送</button>
                                     </div>
                                 </div>
                             </form>
@@ -288,19 +415,19 @@
 <script src="jquery/jquery.min.js"></script>
 <script>
     //  滑鼠處碰加載動畫
-        $('#anmation1').hover(function () {
-            $(this).stop(true, true).toggleClass('magictime slideRightReturn');
+    $('#anmation1').hover(function () {
+        $(this).stop(true, true).toggleClass('magictime slideRightReturn');
 
-        }, function () {
-            $(this).stop(true, true).addClass('magictime slideRightReturn');
+    }, function () {
+        $(this).stop(true, true).addClass('magictime slideRightReturn');
 
-        });
+    });
 
 
 
-        // setInterval(function(){// 一定時間後加載動畫但無限循環
-        //    $('#err').toggleClass('magictime swashIn');
-        // }, 3000 );
+    // setInterval(function(){// 一定時間後加載動畫但無限循環
+    //    $('#err').toggleClass('magictime swashIn');
+    // }, 3000 );
 
 </script>
 <script>
@@ -339,23 +466,23 @@
         //    {href: "#portfolioModal1",imgSrc:"img/088.jpg",title:"088 賽車豹",title2:"Graphic Design"},
         //    {href: "#portfolioModal1",imgSrc:"img/BEAR.jpg",title:"北極熊",title2:"Graphic Design"}
         // ]}
-        data: { Portfolio: [ ] }
+        data: { Portfolio: [] }
     })
- 
+
     var myObject2 = new Vue({
         el: "#portfolio2",
-    
-        data: { Portfolio2: [ ] }
+
+        data: { Portfolio2: [] }
     })
     var myObject3 = new Vue({
         el: "#portfolio3",
-    
-        data: { Portfolio3: [ ] }
+
+        data: { Portfolio3: [] }
     })
     var myObject4 = new Vue({
         el: "#portfolio4",
-    
-        data: { Portfolio4: [ ] }
+
+        data: { Portfolio4: [] }
     })
     $.ajax({
         url: "/portfolio",
@@ -364,7 +491,7 @@
         success: function (data) {
             myObject.Portfolio = data;
         }
-    })   
+    })
     $.ajax({
         url: "/portfolio2",
         method: "get",
@@ -372,7 +499,7 @@
         success: function (data) {
             myObject2.Portfolio2 = data;
         }
-    }) 
+    })
     $.ajax({
         url: "/portfolio3",
         method: "get",
@@ -380,7 +507,7 @@
         success: function (data) {
             myObject3.Portfolio3 = data;
         }
-    })  
+    })
     $.ajax({
         url: "/portfolio4",
         method: "get",
