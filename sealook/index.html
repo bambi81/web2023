@@ -71,7 +71,7 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li><a class="dropdown-item" href="#">首頁</a></li>
                         <li><a class="dropdown-item" href="#role">角色介紹</a></li>
-                        <li><a class="dropdown-item" href="#">精彩影片</a></li>
+                        <li><a class="dropdown-item" href="#video2">精彩影片推薦</a></li>
                         <li><a class="dropdown-item" href="#contact">留言板</a></li>
                     </ul>
 
@@ -85,9 +85,7 @@
                     <li class="col-md-3 col-sm-3 "><a href="#">首頁</a></li>
                     <!-- <li class="me-4"><a  class="btn" style="background:rgb(241, 167, 20);"  data-bs-toggle="collapse" href="#rolelook" aria-expanded="false" aria-controls="rolelook">角色介紹&目錄</a></li> -->
                     <li class="col-md-3 col-sm-3 "><a href="#role">角色介紹</a></li>
-                    <li class="col-md-3 col-sm-3 "><a class="btn" style="background:rgb(241, 167, 20); "
-                            data-bs-toggle="collapse" href="#videolook" role="button" aria-expanded="false"
-                            aria-controls="videolook">精彩影片</a>
+                    <li class="col-md-3 col-sm-3 "><a  href="#video2">精彩影片推薦</a>
                     </li>
                     <li class="col-md-3 col-sm-3 "><a href="#contact">留言板</a></li>
                 </div>
@@ -114,10 +112,10 @@
                     allowfullscreen></iframe>
             </div>
             <div class="mx-5 mt-5">
-                <h1>精彩影片賞析</h1>
+                <h1 id="video2">精彩影片推薦</h1>
                 <button class="btn" type="button" style="background:  rgb(241, 167, 20); " data-bs-toggle="collapse"
                     data-bs-target="#videolook" aria-expanded="false" aria-controls="videolook">
-                    close
+                    open&close
                 </button>
             </div>
             <div class="collapse mt-5 mx-5" id="videolook">
@@ -140,7 +138,7 @@
                     以在野生動物保護區觀察到的帶標籤的海豹為中心，每一集都聚焦不同的海豹，它們通過有趣而溫馨的方式應對生活中古怪而古怪的挑戰。</p>
             </div>
             <div class="mt-5 mx-5">
-                <h1 class="mb-5">出場海豹品種介紹:</h1>
+                <h1 class="mb-5" id="anmation2">出場海豹品種介紹:</h1>
                 <div class="row mb-5">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <img src="img/豎琴海豹.png" alt="sdfd" class=" img-fluid rounded-3 float-end " style="width:80%;">
@@ -207,7 +205,7 @@
             </div>
             <div class="mt-5  mx-5 rounded" id="role" style="background:rgb(249, 235, 208);">
 
-                <h1>角色介紹&目錄</h1>
+                <h1 id="anmation3">角色介紹&目錄</h1>
                 <button class="btn mt-5 mx-5" type="button" style="background: rgb(241, 167, 20);"
                     data-bs-toggle="collapse" data-bs-target="#rolelook" aria-expanded="false" aria-controls="rolelook">
                     全部海豹
@@ -348,7 +346,7 @@
                 <div class="container rounded-3 " style="background:rgb(249, 235, 208);">
                     <div class="row ">
                         <div class="col-lg-12 text-center">
-                            <h1 class="section-heading">留言板</h1>
+                            <h1 class="section-heading" id="anmation4">留言板</h1>
                             <h4 class="section-subheading text-muted">留下你的看法吧!</h4>
                         </div>
                     </div>
@@ -416,15 +414,34 @@
 <script>
     //  滑鼠處碰加載動畫
     $('#anmation1').hover(function () {
-        $(this).stop(true, true).toggleClass('magictime slideRightReturn');
+        $(this).stop(true, true).toggleClass('magictime swashIn');
 
     }, function () {
-        $(this).stop(true, true).addClass('magictime slideRightReturn');
+        $(this).stop(true, true).addClass('magictime swashIn');
+
+    });
+    $('#anmation2').hover(function () {
+        $(this).stop(true, true).toggleClass('magictime swashIn');
+
+    }, function () {
+        $(this).stop(true, true).addClass('magictime swashIn');
+
+    });
+    $('#anmation3').hover(function () {
+        $(this).stop(true, true).toggleClass('magictime swashIn');
+
+    }, function () {
+        $(this).stop(true, true).addClass('magictime swashIn');
 
     });
 
+    $('#anmation4').hover(function () {
+        $(this).stop(true, true).toggleClass('magictime swashIn');
 
+    }, function () {
+        $(this).stop(true, true).addClass('magictime swashIn');
 
+    });
     // setInterval(function(){// 一定時間後加載動畫但無限循環
     //    $('#err').toggleClass('magictime swashIn');
     // }, 3000 );
